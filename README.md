@@ -26,9 +26,16 @@ Far from perfect, could be improved in many areas like making code less redundan
     * *First things first, you can put a "#" in front of a line of code to ignore it (comment). When you try things out, simply duplicate a line and # one of them so you can simply go back to how it was*
 
     * OUT_FILE_NAME defines the name of the txt file that holds your results. No need to change it unless you want to.
+    
     * ALLOWED_COORD_DEVIATION defines how much of a +/- it will accept when looking for things that happened with the item of your choice. If this is 5, an X of "316" that you entered will still lead to a result if the item was moved at ~"321". Can be left as-is.
+    
     * LOG_FILE_NAME defines the name of the log files that are to be searched. This can probably be kept as-is but just in case it ever changes, all you need is turn this knob.
-    * DEFAULT_LOG_DIR_PATH is where it gets interesting. Depending on which (OS) drive letter you took when mirroring the GDrive and how exactly you did it, this might have to be changed. You want this to point to the folder where all the subfolders are then contained, which in turn hold the log files. If it's mirrored the "normal" way, you might just have to change the letter at the front of the string. Otherwise you might want to copy&paste from Windows Explorer to this variable and double any "\" (that is because "\" is an escape character). **This is probably the most important variable to look at for you**
+    * DEFAULT_LOG_DIR_PATH is where it gets interesting. Depending on which (OS) drive letter you took when mirroring the GDrive and how exactly you did it, this might have to be changed. You want this to point to the folder where all the subfolders are then contained, which in turn hold the log files. If it's mirrored the "normal" way, you might just have to change the letter at the front of the string. Otherwise you might want to copy&paste from Windows Explorer to this variable and double any "\" (that is because "\" is an escape character). **This is probably the most important variable to look at for you**  
+    * Since I guess this can be confusing, here is an example:  
+    i:\\\\.shortcut-targets-by-id\\\*\\logs_cherno  
+    the * is a wildcard so it will accept any folder that follows. The important part that in the script, it would change to  
+    i:\\\\\\\\.shortcut-targets-by-id\\\\\*\\\\logs_cherno  
+        
     * FOLDERS_ TO_SKIP defines the names of folders that you don't want to look into. There were some issues when "\_current" was being written so the option exists to ignore it. If you want to add more, just make it look like this afterwards: \['\_current', 'foldername2', 'foldername3'\]
     * SKIP_FOLDERS simply enables or disables the abovementioned skipping. Do what you want with is.
 
