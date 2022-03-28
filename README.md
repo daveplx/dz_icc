@@ -7,6 +7,8 @@ Far from perfect, could be improved in many areas like making code less redundan
 ----
 # How to use
 
+*If you find yourself unable to run the commands that you think should work and the prompt starts with >>> you are most likely in the python interactive mode. Leave it by typing "exit()" and pressing "Enter"*
+
 1. Download Python with a version of *at least* 3.8 from the official website (https://www.python.org/downloads/)
 
 2. Install it, making sure you select "Add to Path". After you did this, you should be able to open a Powershell/CMD window, type "python --version" and see a version being shown instead of an error akin to "python is not recognized yada yada". If you don't, fix it before going forward (Most likely adding Python to your system PATH)
